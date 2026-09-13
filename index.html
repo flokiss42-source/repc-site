@@ -59,9 +59,9 @@
   <div class="container">
     <div class="section-head light"><p class="eyebrow">До и после переустановки</p><h2>Весь процесс по шагам.</h2><p>RePC не переустанавливает Windows сам. Он готовит перенос до установки и помогает восстановить выбранное после неё.</p></div>
     <div class="workflow">
-      <article><div class="step-top"><b>01</b><span>На старой Windows</span></div><h3>Просканируйте компьютер</h3><p>Проверьте найденные программы, данные, игры, драйверы и продукты с лицензиями.</p><img src="assets/repc-overview-v10.png" alt="Актуальная вкладка обзора RePC 0.10.0"></article>
-      <article><div class="step-top"><b>02</b><span>На флешку или диск</span></div><h3>Сохраните паспорт</h3><p>Выберите нужное и сохраните файл .repc на NTFS/exFAT‑накопитель с рассчитанным запасом места.</p><img src="assets/repc-save-v10.png" alt="Выбор данных и сохранение паспорта RePC"></article>
-      <article><div class="step-top"><b>03</b><span>На новой Windows</span></div><h3>Откройте и восстановите</h3><p>Установите RePC, откройте паспорт, верните файлы и настройки, затем установите программы.</p><img src="assets/repc-restore-v10.png" alt="Инструкция восстановления из паспорта RePC"></article>
+      <article><div class="step-top"><span>На старой Windows</span></div><h3>Просканируйте компьютер</h3><p>Проверьте найденные программы, данные, игры, драйверы и продукты с лицензиями.</p><img src="assets/repc-overview-v10.png" alt="Актуальная вкладка обзора RePC 0.10.0"></article>
+      <article><div class="step-top"><span>На флешку или диск</span></div><h3>Сохраните паспорт</h3><p>Выберите нужное и сохраните файл .repc на NTFS/exFAT‑накопитель с рассчитанным запасом места.</p><img src="assets/repc-save-v10.png" alt="Выбор данных и сохранение паспорта RePC"></article>
+      <article><div class="step-top"><span>На новой Windows</span></div><h3>Откройте и восстановите</h3><p>Установите RePC, откройте паспорт, верните файлы и настройки, затем установите программы.</p><img src="assets/repc-restore-v10.png" alt="Инструкция восстановления из паспорта RePC"></article>
     </div>
     <div class="storage-note"><strong>Какой накопитель нужен?</strong><span>После сканирования RePC считает объём выбранных данных. Для документов обычно достаточно 32–64 ГБ; для библиотек игр или образа Windows чаще нужен внешний HDD/SSD от 500 ГБ. Формат — NTFS или exFAT, не FAT32.</span></div>
   </div>
@@ -80,8 +80,8 @@
     </div>
     <div class="verify-command"><p>Проверка в PowerShell:</p><code>Get-FileHash "$env:USERPROFILE\Downloads\RePC.exe" -Algorithm SHA256</code></div>
     <div class="smartscreen-grid">
-      <figure><img src="assets/smartscreen-more-info.png" alt="На предупреждении SmartScreen нажмите Подробнее"><figcaption><b>1.</b> Если хеш совпал, нажмите «Подробнее».</figcaption></figure>
-      <figure><img src="assets/smartscreen-run-anyway.png" alt="После проверки имени файла нажмите Выполнить в любом случае"><figcaption><b>2.</b> Проверьте имя RePC.exe и нажмите «Выполнить в любом случае».</figcaption></figure>
+      <figure><img src="assets/smartscreen-more-info.png" alt="На предупреждении SmartScreen нажмите Подробнее"><figcaption>Если хеш совпал, нажмите «Подробнее».</figcaption></figure>
+      <figure><img src="assets/smartscreen-run-anyway.png" alt="После проверки имени файла нажмите Выполнить в любом случае"><figcaption>Проверьте имя RePC.exe и нажмите «Выполнить в любом случае».</figcaption></figure>
     </div>
     <p class="mock-note">Изображения — наглядные макеты Windows 10/11. Точный вид окна зависит от версии и политики безопасности. Мы не рекомендуем отключать SmartScreen или антивирус.</p>
   </div>
@@ -91,10 +91,10 @@
   <div class="container security-grid">
     <div class="section-head"><p class="eyebrow">Безопасность</p><h2>Доверие можно проверить.</h2><p>Публичный хеш фиксирует конкретную сборку. Паспорт проверяется перед восстановлением, опасные пути блокируются, а бизнес-данные хранятся в зашифрованном разделе архива.</p></div>
     <div class="security-list">
-      <div><b>01</b><span><strong>Локальный паспорт</strong>Личные файлы не отправляются в облако RePC.</span></div>
-      <div><b>02</b><span><strong>Контроль целостности</strong>Повреждённый или изменённый архив отклоняется.</span></div>
-      <div><b>03</b><span><strong>Онлайн-лицензирование</strong>Платный ключ связан с компьютером и регулярно проверяется сервером.</span></div>
-      <div><b>04</b><span><strong>Без скрытых обещаний</strong>Не все сторонние лицензии технически переносимы; RePC показывает найденное до оплаты.</span></div>
+      <div><span><strong>Локальный паспорт</strong>Личные файлы не отправляются в облако RePC.</span></div>
+      <div><span><strong>Контроль целостности</strong>Повреждённый или изменённый архив отклоняется.</span></div>
+      <div><span><strong>Онлайн-лицензирование</strong>Платный ключ связан с компьютером и регулярно проверяется сервером.</span></div>
+      <div><span><strong>Без скрытых обещаний</strong>Не все сторонние лицензии технически переносимы; RePC показывает найденное до оплаты.</span></div>
     </div>
   </div>
 </section>
