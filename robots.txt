@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flokiss42-source.github.io/repc-site/sitemap.xml
