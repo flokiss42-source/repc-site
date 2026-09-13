@@ -1,14 +1,11 @@
 # RePC landing page
 
-Статический лендинг для GitHub Pages, Vercel или Cloudflare Pages. Публиковать нужно
-содержимое этой папки как корень сайта. EXE хранится в GitHub Release, чтобы не превышать
-ограничение GitHub на размер файла в обычном репозитории.
+Статический лендинг RePC для GitHub Pages. Содержимое этой папки публикуется как корень сайта. EXE хранится в GitHub Releases, чтобы не превышать ограничение GitHub на размер файла в обычном репозитории.
 
-После запуска PaymentServer добавьте перед `app.js` строку:
+Боевой платёжный сервер уже указан в `app.js`:
 
-```html
-<script>window.REPC_CHECKOUT_URL = 'https://pay.example.com/checkout';</script>
+```js
+const checkoutUrl = window.REPC_CHECKOUT_URL || 'https://pay.46-8-98-79.sslip.io/checkout';
 ```
 
-До подключения кассы кнопки тарифов честно показывают уведомление и не ведут на
-несуществующую оплату.
+Тарифы Plus, Pro и Business передаются серверу через параметр `plan`. Актуальная сборка, SHA-256 и метаданные релиза публикуются в GitHub Release.

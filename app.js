@@ -1,17 +1,32 @@
-// Set this after deploying the PaymentServer, for example:
-// window.REPC_CHECKOUT_URL = 'https://pay.example.com/checkout';
+const checkoutUrl = window.REPC_CHECKOUT_URL || 'https://pay.46-8-98-79.sslip.io/checkout';
+
 document.querySelectorAll('.buy').forEach((button) => {
   button.addEventListener('click', (event) => {
-    const base = window.REPC_CHECKOUT_URL;
-    if (!base) {
+    try {
+      const url = new URL(checkoutUrl);
+      url.searchParams.set('plan', button.dataset.plan || 'plus');
       event.preventDefault();
-      document.querySelector('#buy').scrollIntoView({ behavior: 'smooth' });
-      alert('Оплата подключается после настройки платёжного сервера. Пока скачайте RePC и выполните бесплатное сканирование.');
-      return;
+      window.location.assign(url.toString());
+    } catch {
+      // The normal href remains available if custom configuration is invalid.
     }
-    event.preventDefault();
-    const url = new URL(base);
-    url.searchParams.set('plan', button.dataset.plan || 'plus');
-    window.location.href = url.toString();
   });
+});
+
+const copyButton = document.querySelector('#copy-hash');
+const hash = document.querySelector('#release-hash');
+const toast = document.querySelector('#toast');
+copyButton?.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(hash?.textContent?.trim() || '');
+    copyButton.textContent = 'Скопировано';
+    toast?.classList.add('show');
+    window.setTimeout(() => {
+      copyButton.textContent = 'Скопировать';
+      toast?.classList.remove('show');
+    }, 1800);
+  } catch {
+    window.getSelection()?.selectAllChildren(hash);
+    copyButton.textContent = 'Выделено';
+  }
 });
