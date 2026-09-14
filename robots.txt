@@ -1,7 +1,8 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://flokiss42-source.github.io/repc-site/sitemap.xml
+Sitemap: https://getrepc.ru/sitemap.xml
 
-Host: https://flokiss42-source.github.io/repc-site/
+Host: https://getrepc.ru/
+
 
