@@ -1,27 +1,27 @@
-{
-  "product": "RePC",
-  "version": "0.11.0-rc.1",
-  "channel": "release-candidate",
-  "sha256": "362705BF6D77B69E93CA271099CED9DD17E299A331D128E50C2D4FBA97B7CFD6",
-  "authenticodeSigned": false,
-  "builtUtc": "2026-09-14T06:43:06.604Z",
-  "runtime": ".NET 8.0.31",
-  "sdk": "8.0.425",
-  "architecture": "win-x64",
-  "sizeBytes": 164359617,
-  "tests": {
-    "clientChecks": 100,
-    "serverUnitChecks": 12,
-    "serverHttpChecks": 21,
-    "mainWindowChecks": 14,
-    "dialogChecks": 3,
-    "webPageViewportChecks": 27
-  },
-  "limitations": [
-    "Real licensed vendor transfer tests not completed",
-    "Windows configuration matrix incomplete",
-    "Physical media/power-loss tests not completed",
-    "24 GiB incompressible test not run: requires 73 GiB free",
-    "Authenticode certificate not configured"
-  ]
+﻿{
+    "product":  "RePC",
+    "version":  "0.11.0-rc.1",
+    "channel":  "release-candidate",
+    "sha256":  "E8BA0F85121B3C37E504FB451C3438DB47FDF9C9945E611D01AD6AC70C2325CF",
+    "authenticodeSigned":  false,
+    "builtUtc":  "2026-09-14T06:43:06.604Z",
+    "runtime":  ".NET 8.0.31",
+    "sdk":  "8.0.425",
+    "architecture":  "win-x64",
+    "sizeBytes":  164363713,
+    "tests":  {
+                  "clientChecks":  100,
+                  "serverUnitChecks":  12,
+                  "serverHttpChecks":  21,
+                  "mainWindowChecks":  14,
+                  "dialogChecks":  3,
+                  "webPageViewportChecks":  27
+              },
+    "limitations":  [
+                        "Real licensed vendor transfer tests not completed",
+                        "Windows configuration matrix incomplete",
+                        "Physical media/power-loss tests not completed",
+                        "24 GiB incompressible test not run: requires 73 GiB free",
+                        "Authenticode certificate not configured"
+                    ]
 }
