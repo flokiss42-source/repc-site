@@ -1,4 +1,7 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 Sitemap: https://flokiss42-source.github.io/repc-site/sitemap.xml
+
+Host: https://flokiss42-source.github.io/repc-site/
+
