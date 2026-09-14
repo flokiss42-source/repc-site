@@ -8,7 +8,7 @@
     "runtime":  ".NET 8.0.31",
     "sdk":  "8.0.425",
     "architecture":  "win-x64",
-    "sizeBytes":  164363713,
+    "sizeBytes":  164371905,
     "tests":  {
                   "clientChecks":  100,
                   "serverUnitChecks":  12,
