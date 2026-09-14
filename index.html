@@ -36,7 +36,7 @@
     <div class="hero-copy">
       <div class="release-pill"><span></span> 0.11 RC2 · Предварительный выпуск</div>
       <h1>Новая Windows.<br>Всё важное —<br>с вами.</h1>
-      <p class="hero-lead">Программы, проекты, настройки и сохранения игр. Соберите всё нужное в один паспорт компьютера — и возвращайтесь к работе после переустановки.</p>
+      <p class="hero-lead">Программы, проекты, настройки и сохранения игр. RePC собирает локальный паспорт; Windows вы устанавливаете сами, а затем возвращаете рабочую среду после переустановки.</p>
       <div class="hero-actions">
         <a class="button button-primary button-large" href="https://github.com/flokiss42-source/repc-site/releases/download/v0.11.0-rc.2/RePC.exe">Скачать RePC бесплатно</a>
         <a class="button button-ghost button-large" href="#workflow">Как это работает</a>
@@ -72,32 +72,14 @@
     <div class="section-head light"><p class="eyebrow">До и после переустановки</p><h2>Весь процесс по шагам.</h2><p>RePC не переустанавливает Windows сам. Он готовит перенос до установки и помогает восстановить выбранное после неё.</p></div>
     <div class="workflow">
       <article><div class="step-top"><span>На старой Windows</span></div><h3>Просканируйте компьютер</h3><p>Проверьте найденные программы, данные, игры, драйверы и продукты с лицензиями.</p><img loading="lazy" src="assets/repc-overview-v11.png" alt="Обзор RePC 0.11 RC2 на демонстрационных данных"></article>
-      <article><div class="step-top"><span>На флешку или диск</span></div><h3>Сохраните паспорт</h3><p>Выберите нужное и сохраните файл .repc на NTFS/exFAT‑накопитель с рассчитанным запасом места.</p><img loading="lazy" src="assets/repc-save-v11.png" alt="Выбор данных и сохранение паспорта RePC"></article>
-      <article><div class="step-top"><span>На новой Windows</span></div><h3>Откройте и восстановите</h3><p>Установите RePC, откройте паспорт, верните файлы и настройки, затем установите программы.</p><img loading="lazy" src="assets/repc-restore-v11.png" alt="Инструкция восстановления из паспорта RePC"></article>
+      <article><div class="step-top"><span>На флешку или диск</span></div><h3>Сохраните паспорт</h3><p>Выберите нужное и сохраните файл .repc на NTFS/exFAT‑накопитель с рассчитанным запасом места. RC2 — предварительная сборка: держите вторую копию важных файлов.</p><img loading="lazy" src="assets/repc-save-v11.png" alt="Выбор данных и сохранение паспорта RePC"></article>
+      <article><div class="step-top"><span>На новой Windows</span></div><h3>Установите Windows сами, затем восстановите паспорт</h3><p>После чистой установки скачайте RePC, откройте паспорт, верните файлы и настройки, затем установите программы.</p><img loading="lazy" src="assets/repc-restore-v11.png" alt="Инструкция восстановления из паспорта RePC"></article>
     </div>
     <div class="storage-note"><strong>Какой накопитель нужен?</strong><span>После сканирования RePC считает объём выбранных данных. Для документов обычно достаточно 32–64 ГБ; для библиотек игр или образа Windows чаще нужен внешний HDD/SSD от 500 ГБ. Формат — NTFS или exFAT, не FAT32.</span></div>
   </div>
 </section>
 
-<section id="launch" class="section launch-section">
-  <div class="container">
-    <div class="section-head"><p class="eyebrow">Первый запуск</p><h2>Почему Windows может показать предупреждение?</h2><p>RePC 0.11.0 RC2 распространяется без коммерческого сертификата Authenticode. Для разработчиков и компаний из России выпуск и перевыпуск международных сертификатов ограничен рядом зарубежных удостоверяющих центров; например, DigiCert официально приостановил выдачу всех типов сертификатов, связанных с РФ и Беларусью. Это объясняет статус «Неизвестный издатель», но само по себе не доказывает ни безопасность, ни вредоносность файла.</p></div>
-    <div class="source-notice">
-      <div><strong>Проверяйте перед запуском</strong><p>Скачивайте только по кнопке на этом сайте. Убедитесь, что файл называется <code>RePC.exe</code>, и сравните SHA‑256. Не запускайте копию из письма, мессенджера или постороннего сайта.</p></div>
-      <a href="https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation" target="_blank" rel="noopener">Как работает SmartScreen — Microsoft ↗</a>
-    </div>
-    <p class="release-notice">Проверить файл можно через <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener">VirusTotal</a>. Сравнивайте SHA‑256 отчёта с текущей сборкой ниже: отчёт другой версии не подтверждает этот файл.</p><p class="release-notice">Проверены автоматические сценарии архива, целостности и лицензирования. Реальный перенос 1С, КриптоПро, СБИС и Контур требует проверки на вашем лицензированном стенде; восстановление файлов не заменяет активацию.</p><p class="release-notice">Требования: Windows 10/11 x64. EXE самодостаточный и не требует отдельной установки .NET. Если Windows пишет «не подходит для вашего ПК», скачайте файл заново и сравните SHA-256 ниже — причиной может быть неполная загрузка или неподдерживаемая архитектура.</p><div class="hash-card">
-      <div><span>SHA‑256 · RePC 0.11.0 RC2</span><code id="release-hash">D4EACA94903CCBB213767711C6D5DCAB928DFF1C4F572F6AFDFD1884C2787C63</code></div>
-      <button type="button" id="copy-hash">Скопировать</button>
-    </div>
-    <div class="verify-command"><p>Проверка в PowerShell:</p><code>Get-FileHash "$env:USERPROFILE\Downloads\RePC.exe" -Algorithm SHA256</code></div>
-    <div class="smartscreen-grid">
-      <figure><img src="assets/smartscreen-more-info.png" alt="На реальном окне SmartScreen нажмите «Подробнее»"><figcaption>Если хеш совпал, нажмите «Подробнее».</figcaption></figure>
-      <figure><img src="assets/smartscreen-run-anyway.png" alt="После проверки имени файла нажмите «Выполнить в любом случае»"><figcaption>Проверьте имя RePC.exe и нажмите «Выполнить в любом случае».</figcaption></figure>
-    </div>
-    <p class="mock-note">Изображения — наглядные макеты Windows 10/11. Точный вид окна зависит от версии и политики безопасности. Мы не рекомендуем отключать SmartScreen или антивирус.</p>
-  </div>
-</section>
+<section id="launch" class="section launch-section"><div class="container"><div class="section-head"><p class="eyebrow">Первый запуск</p><h2>Проверьте файл перед запуском.</h2><p>Новая сборка RePC 0.11.0 RC2 пока не имеет коммерческой подписи Authenticode, поэтому Windows может показать «Неизвестный издатель». Это не повод отключать защиту: скачайте файл с официальной страницы, сравните SHA‑256 и оставьте Defender включённым.</p></div><div class="source-notice"><div><strong>SmartScreen — коротко</strong><p>Если имя файла <code>RePC.exe</code> и SHA‑256 совпадают с опубликованными, в окне предупреждения нажмите «Подробнее», затем «Выполнить в любом случае».</p></div><a href="after-clean-windows-install.html">Пошаговая инструкция после установки ↗</a></div><p class="release-notice">Подробности о сертификатах, VirusTotal, проверке хеша и ограничениях RC2 — в <a href="changelog.html">истории изменений</a> и <a href="guide.html">инструкции</a>.</p><div class="hash-card"><div><span>SHA‑256 · RePC 0.11.0 RC2</span><code id="release-hash">D4EACA94903CCBB213767711C6D5DCAB928DFF1C4F572F6AFDFD1884C2787C63</code></div><button type="button" id="copy-hash">Скопировать</button></div><div class="verify-command"><p>Проверка в PowerShell:</p><code>Get-FileHash "$env:USERPROFILE\Downloads\RePC.exe" -Algorithm SHA256</code></div><p class="mock-note">Не отключайте SmartScreen или антивирус. Если хеш не совпал, удалите файл и скачайте его заново.</p></div></section>
 
 <section id="security" class="section security-section">
   <div class="container security-grid"><figure class="integrity-art"><img loading="lazy" width="1536" height="1024" src="assets/integrity-v11.webp" alt="Внешний SSD и документы: локальное хранение и проверка целостности"><figcaption>Ваши данные — на вашем накопителе.</figcaption></figure>
@@ -115,7 +97,7 @@
 <div class="section-head"><p class="eyebrow">Как проверяли надёжность</p><h2>Проверяем не только успешное сохранение.</h2><p>Автоматические проверки контролируют ошибки записи и восстановления. Результаты лабораторных прогонов за 13 сентября 2026 года:</p></div>
 <div class="reliability-grid"><article><strong>24 ГиБ</strong><h3>Большой паспорт</h3><p>Шесть файлов восстановлены с совпавшим SHA‑256. Проверен ZIP64; этот прогон использовал сжимаемые данные.</p></article><article><strong>17 сценариев</strong><h3>Сбои и отмена</h3><p>Заполнение диска, прерывание записи, отмена, ошибка переименования и сохранность существующих файлов.</p></article><article><strong>SHA‑256 + AES‑GCM</strong><h3>Проверка содержимого</h3><p>Повреждённый архив, неверный пароль и подмена зашифрованных данных отклоняются в автоматических тестах.</p></article></div>
 <p class="release-notice">Ещё не завершены: реальный перенос лицензий 1С, КриптоПро, СБИС и Контур, полная матрица Windows, физическое отключение носителя и большой прогон несжимаемых данных. Сборка остаётся предварительной.</p>
-</div></section>
+</div></section><section class="workflow-cta"><div><strong>Готовы проверить свой компьютер?</strong><span>Сканирование и обычный паспорт бесплатны.</span></div><a class="button button-primary" href="https://github.com/flokiss42-source/repc-site/releases/download/v0.11.0-rc.2/RePC.exe">Скачать RePC бесплатно</a></section>
 <section id="pricing" class="section pricing-section">
   <div class="container">
     <div class="section-head"><p class="eyebrow">Тарифы</p><h2>Сначала бесплатно посмотрите результат.</h2><p>Plus оплачивается один раз. Pro и Business действуют 365 дней. Каждый ключ привязан к одному компьютеру; для активации и регулярной проверки нужен интернет.</p></div>
