@@ -1,26 +1,7 @@
-{
-  "product": "RePC",
-  "version": "0.11.0-rc.2",
-  "channel": "release-candidate",
-  "sha256": "D4EACA94903CCBB213767711C6D5DCAB928DFF1C4F572F6AFDFD1884C2787C63",
-  "authenticodeSigned": false,
-  "builtUtc": "2026-09-14T16:18:31.693Z",
-  "runtime": ".NET 8.0.31",
-  "architecture": "win-x64",
-  "sizeBytes": 164371905,
-  "tests": {
-    "client": "Passed, including checkout regressions",
-    "server": "12 checks passed; payment server unchanged",
-    "dialogs": 3,
-    "webPageViewports": 30,
-    "webInteractions": "Passed",
-    "clientChecks": 106
-  },
-  "limitations": [
-    "Real licensed vendor transfer tests not completed",
-    "Windows configuration matrix incomplete",
-    "Physical media/power-loss tests not completed",
-    "24 GiB incompressible test not run: requires 73 GiB free",
-    "Authenticode certificate not configured"
-  ]
+﻿{
+    "product":  "RePC",
+    "version":  "0.11.0-rc.2",
+    "sha256":  "5C48F95E3FDBC5D42006FF6A0811727BA5583454DBFB3C9484B91BCD325FF1C6",
+    "authenticodeSigned":  false,
+    "builtUtc":  "2026-09-15T08:07:10.5069716+00:00"
 }
