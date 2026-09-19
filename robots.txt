@@ -1,8 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://getrepc.ru/sitemap.xml
-
-Host: https://getrepc.ru/
-
-
