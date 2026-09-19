@@ -28,3 +28,6 @@ html,body{max-width:100%;overflow-x:hidden}.hero-art,img{max-width:100%}@media(m
 
 /* Clear product boundaries and compact first-launch guidance. */
 .workflow-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:0 20px 20px;padding:28px max(24px,calc((100% - 1152px)/2));background:#e3eff3;color:#173b50}.workflow-cta strong{display:block;font-size:20px}.workflow-cta span{display:block;margin-top:4px;color:#496375;font-size:13px}.workflow-cta .button{flex:none}@media(max-width:700px){.workflow-cta{margin:0 10px 10px;padding:24px 18px;align-items:flex-start;flex-direction:column}.workflow-cta .button{width:100%}}
+
+/* Purchase guidance. */
+.purchase-value{background:#f4f8f9}.purchase-value .reliability-grid article{background:#fff}.purchase-note{margin:26px 0;color:#385569;line-height:1.7;max-width:900px}.purchase-value .button{margin:0 8px 8px 0}.price-card .badge{white-space:nowrap;font-size:10px}
