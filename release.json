@@ -1,8 +1,8 @@
 {
   "product": "RePC",
-  "version": "0.12.0-rc.2",
-  "sha256": "30B58F329055F5EE452A9BC658FA9DCF4E1D071F3CEDA4DCDE1E22D1F161ADDC",
+  "version": "0.12.0-rc.3",
+  "sha256": "89F7D2433CCC8B398A3F4E6B493D6D94E917C83B655FB0939774B4DD58A095B0",
   "sizeBytes": 156196098,
   "authenticodeSigned": false,
-  "builtUtc": "2026-09-19T08:44:53.675Z"
+  "builtUtc": "2026-09-19T08:51:48.365Z"
 }
