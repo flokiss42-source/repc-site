@@ -34,3 +34,6 @@ footer{background:#102c38;margin-top:24px;padding-top:55px}.footer-grid{gap:34px
 @media(prefers-reduced-motion:reduce){.button,.audience-grid article{transition:none}}
 
 .skip-link:not(:focus){clip-path:inset(50%);width:1px;height:1px;overflow:hidden;padding:0;white-space:nowrap}
+
+/* Keep the complete application window and its bottom actions visible. */
+.workflow img{height:auto;aspect-ratio:auto;object-fit:contain}.workflow-screenshot-note{margin:18px 0;color:#bdd4d9;font-size:12px;line-height:1.7}
