@@ -71,7 +71,7 @@ preview.innerHTML = '<button type="button" aria-label="Закрыть изобр
 document.body.append(preview);
 preview.querySelector('button').addEventListener('click', () => preview.close());
 preview.addEventListener('click', event => { if (event.target === preview) preview.close(); });
-document.querySelectorAll('.workflow img').forEach(img => {
+document.querySelectorAll('.workflow img, .workflow-interface img').forEach(img => {
   const button = document.createElement('button');
   button.type = 'button'; button.className = 'preview-trigger';
   button.setAttribute('aria-label', 'Увеличить: ' + img.alt);
