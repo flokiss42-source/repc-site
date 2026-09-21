@@ -55,7 +55,7 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   if (!event.target.closest('.header-inner')) closeMenu();
 });
-window.matchMedia('(max-width: 900px)').addEventListener('change', closeMenu);
+window.matchMedia('(max-width: 1050px)').addEventListener('change', closeMenu);
 document.querySelectorAll('[data-recommend]').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-recommend]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
