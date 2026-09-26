@@ -2,11 +2,7 @@
 
 Файлы, настройки, поддерживаемые игровые сохранения и список программ — в одном локальном паспорте `.repc`. Подготовьте его на старом компьютере и откройте после установки Windows или на новом ПК.
 
-**[Официальный сайт](https://getrepc.ru/?utm_source=github&utm_medium=organic&utm_campaign=free_launch&utm_content=readme)** · **[Скачать RePC 0.12.0 RC12](https://github.com/flokiss42-source/repc-site/releases/tag/v0.12.0-rc.12)** · **[Инструкция](https://getrepc.ru/guide.html)** · **[Чек-лист перед переустановкой](https://getrepc.ru/windows-reinstall-checklist.html?utm_source=github&utm_medium=organic&utm_campaign=free_launch&utm_content=checklist)**
-
-## Прямой перенос по USB4
-
-RC12 добавляет передачу паспорта RePC напрямую между совместимыми компьютерами с Windows 11 по USB4/Thunderbolt networking. Обычный USB-C кабель не подходит. Физическая передача между двумя ПК в этом выпуске ещё не проверялась. Если USB4 недоступен, используйте обычную флешку или внешний диск.
+**[Официальный сайт](https://getrepc.ru/?utm_source=github&utm_medium=organic&utm_campaign=free_launch&utm_content=readme)** · **[Скачать предварительный выпуск RC13](https://github.com/flokiss42-source/repc-site/releases/tag/v0.12.0-rc.13)** · **[Инструкция](https://getrepc.ru/guide.html)** · **[Чек-лист перед переустановкой](https://getrepc.ru/windows-reinstall-checklist.html?utm_source=github&utm_medium=organic&utm_campaign=free_launch&utm_content=checklist)**
 
 ## Как это работает
 
@@ -39,7 +35,7 @@ RC12 добавляет передачу паспорта RePC напрямую 
 
 RePC не устанавливает Windows, не гарантирует перенос любой программы или сторонней лицензии и не заменяет отдельную копию незаменимых файлов. Список программ используется для переустановки найденных пакетов, а не для копирования всех установленных приложений целиком. Вход в аккаунты и повторная активация могут потребоваться снова.
 
-Личные файлы не загружаются на сервер RePC. Сборка RC12 предварительная и пока без коммерческой подписи Authenticode. Проверяйте SHA-256 на официальном сайте и не отключайте антивирус.
+Личные файлы не загружаются на сервер RePC. Сборка RC13 предварительная и пока без коммерческой подписи Authenticode. Проверяйте SHA-256 на официальном сайте и не отключайте антивирус.
 
 ## Обратная связь
 
