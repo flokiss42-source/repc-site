@@ -47,7 +47,6 @@
         link.querySelector('i').style.width = `${clamp(progress * 3 - i) * 100}%`;
         if (i === phase) link.setAttribute('aria-current', 'step'); else link.removeAttribute('aria-current');
       });
-      document.querySelector('.journey-counter').textContent = `0${phase + 1} / 03`;
     }
     if (heroArt && hero && !motionOff) {
       const amount = clamp(-hero.getBoundingClientRect().top / hero.offsetHeight);
