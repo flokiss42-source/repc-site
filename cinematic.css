@@ -34,3 +34,20 @@ html.motion-off .journey-track,html.no-js .journey-track{height:auto}html.motion
 :root{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;--muted:#adb6ca}.brand img{width:38px!important;height:38px!important;filter:none!important}.header-inner nav a{font-size:14px}.kicker,.card-topline,.release-caption,.orbit-caption,.opening-bottom,.chapter-note,.journey-rail,.route-label,.plan-head>span,.plan-badge,.test-label,.hash-card>span,.footer-bottom,.window-bar,.passport-index{font-family:inherit;font-size:11px;letter-spacing:.1em}.opening-description{font-size:15px;line-height:1.8}.world-card>p,.route-card>p,.price-card>p{font-size:15px;line-height:1.8}.route-card li{font-size:15px;line-height:1.75}.route-card small{font-size:13px}.price-card li{font-size:13px;line-height:1.75;margin-bottom:14px}.pricing-notes p{font-size:13px;line-height:1.85}.section-heading>p:last-child{font-size:17px;line-height:1.85}.article-body p{font-size:16px;line-height:1.9}.article-body li{font-size:15px}.article-toc a{font-size:12px}.related>div a,.article-body .related a{font-size:13px}.footer-bottom,.footer-top p,.footer-top a{font-size:13px}
 /* Reveal the real migration scene as a left-to-right transfer, without a portal mask. */
 .transfer-scene{clip-path:inset(0 calc(100% - var(--reveal,0%)) 0 0);transform:scale(var(--transfer-scale,1.08))}
+
+/* Mobile layout: keep the established RePC mark and show both ends of the migration scene. */
+@media(max-width:760px){
+  .journey-stage{min-height:620px}
+  .transfer-scene>img{inset:auto 0 auto;width:100%;height:auto;max-height:42%;top:52%;object-fit:contain;object-position:center;transform:translateY(-50%)}
+  .mirage-canvas{display:none}
+  .journey-shade{background:linear-gradient(180deg,#080b16f2 0%,#080b16d9 33%,transparent 66%),linear-gradient(0deg,#090b12dc,transparent 50%)}
+  .journey-rail{gap:12px}
+  .journey-rail a{font-size:9px}
+}
+@media(max-width:370px){
+  .brand img{display:block!important;width:27px!important;height:27px!important}
+  .brand{gap:7px;font-size:22px}
+  .header-inner{gap:8px}
+  .header-download{padding:9px 10px;gap:9px;font-size:9px}
+  .menu-toggle{padding:8px 9px;font-size:9px}
+}
