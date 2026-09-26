@@ -12,14 +12,11 @@
   const rail = [...document.querySelectorAll('[data-jump]')];
   const hero = document.querySelector('.opening');
   const heroArt = document.querySelector('.opening-art');
-  const meter = document.createElement('div'); meter.className = 'reading-progress'; meter.setAttribute('aria-hidden', 'true'); document.body.append(meter);
   const clamp = (n, min = 0, max = 1) => Math.min(max, Math.max(min, n));
   const ease = n => n * n * (3 - 2 * n);
   let renderer = null;
   function paintScroll() {
     pending = 0;
-    const scrollRange = root.scrollHeight - innerHeight;
-    meter.style.transform = `scaleX(${scrollRange > 0 ? clamp(scrollY / scrollRange) : 0})`;
     if (track && !motionOff) {
       const header = document.querySelector('.site-header').getBoundingClientRect().height;
       const distance = Math.max(1, track.offsetHeight - (innerHeight - header));
@@ -27,9 +24,9 @@
       phase = Math.min(2, Math.round(progress * 2));
       track.dataset.phase = String(phase); track.dataset.progress = progress.toFixed(3);
       const emergence = ease(clamp((progress - .04) / .50));
-      stage.style.setProperty('--portal', String(clamp(emergence * 1.7)));
+      stage.style.setProperty('--transfer', String(clamp(emergence * 1.7)));
       stage.style.setProperty('--reveal', `${emergence * 135}%`);
-      stage.style.setProperty('--portal-scale', String(1.25 - emergence * .25));
+      stage.style.setProperty('--transfer-scale', String(1.08 - emergence * .08));
       stage.style.setProperty('--pass-scale', String(1 - ease(clamp(progress * 2)) * .80));
       stage.style.setProperty('--pass-x', `${ease(clamp(progress * 2)) * 28}%`);
       stage.style.setProperty('--pass-rotate', `${-12 + progress * 64}deg`);
@@ -81,7 +78,7 @@
   document.querySelectorAll('[data-reveal]').forEach(el => reveals.observe(el));
   setMotion();
 
-  // The actual generated portal photograph is refracted, not replaced with a generic shape.
+  // Refract the generated old-to-new computer transfer scene directly.
   function createMirage() {
     const canvas = document.querySelector('.mirage-canvas');
     if (!canvas) return null;
@@ -96,9 +93,9 @@
         float transition=pow(sin(progress*3.14159265),2.);
         float mist=sin(q.y*13.+time*.45+sin(q.x*9.-time*.3))*sin(q.x*10.+q.y*5.+time*.22);
         float lens=exp(-length((q-vec2(.7,.48))*vec2(1.2,1.))*2.4);
-        vec2 bend=vec2(mist,sin(q.x*17.+time*.35+q.y*4.))*lens*(.003+transition*.035);
+        vec2 bend=vec2(mist,sin(q.x*17.+time*.35+q.y*4.))*lens*(.001+transition*.009);
         vec2 warped=clamp(q+bend,vec2(.001),vec2(.999));
-        float split=transition*.003*lens;
+        float split=transition*.0008*lens;
         vec3 color=vec3(texture2D(picture,clamp(warped+vec2(split,0.),0.,1.)).r,texture2D(picture,warped).g,texture2D(picture,clamp(warped-vec2(split,0.),0.,1.)).b);
         gl_FragColor=vec4(color,1.);
       }`;
@@ -134,7 +131,7 @@
         const texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,picture);gl.uniform1i(uniforms.picture,0);ready=true;resize();render();canvas.classList.add('is-ready');sync();
       } catch { canvas.classList.remove('is-ready'); }
     };
-    picture.src = new URL('assets/migration-portal.webp',document.baseURI).href;
+    picture.src = new URL('assets/migration-transfer-scene.webp',document.baseURI).href;
     function resize(){const box=canvas.getBoundingClientRect();const scale=Math.min(1.25,devicePixelRatio||1,1100/Math.max(1,box.width),900/Math.max(1,box.height));canvas.width=Math.max(1,Math.round(box.width*scale));canvas.height=Math.max(1,Math.round(box.height*scale));gl.viewport(0,0,canvas.width,canvas.height);render();}
     new ResizeObserver(resize).observe(canvas);
     new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();}).observe(stage);
