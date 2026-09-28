@@ -1,3 +1,4 @@
+document.documentElement.classList.remove('no-js');
 // Keep referral attribution for 30 days; storage may be unavailable in private browsing.
 let referralCode = '';
 try {
